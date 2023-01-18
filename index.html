@@ -7,12 +7,15 @@
   <meta name="author" content="Владислав Шулепов">
   <meta name="description" content="Сайт для бронирования отелей">
   <title>Сеть отелей &sdot; Lagoona</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
-    <header class="header">
-      <div class="header-top">
-        <div class="header-top-left">
+    <!-- *header -->
+    <header class="header margin-bot">
+      <div class="header-top flex">
+        <div class="header-top-left flex">
           <a class="header-logo" href="#">
             <img src="img/logo.2x.png" alt="Логотип сайта Lagoona">
           </a>
@@ -20,9 +23,9 @@
         </div>
         <a class="header-lk" href="#">Личный кабинет</a>
       </div>
-      <div class="header-bot">
+      <div class="header-bot flex">
         <nav class="header-nav">
-          <ul class="list-rst header-list">
+          <ul class="header-list list-rst flex">
            <li class="header-item">
             <a class="header-item-link" href="#">О&nbsp;нас</a>
           </li>
@@ -43,39 +46,73 @@
           </li>
           </ul>
         </nav>
-        <button class="btn header-btn">Хочу тур</button>
-        <button class="btn header-btn">Обратный звонок</button>
+        <div class="header-buttons">
+          <button class="header-btn btn">Хочу тур</button>
+          <button class="header-btn btn">Обратный звонок</button>
+        </div>
       </div>
     </header>
     <main class="main">
-      <section class="section offers">
-        <h2 class="section-title offers-title">Спецпредложения</h2>
-        <ul class="list-rst offers-list">
-          <li class="offers-item">
+      <!-- !offers переделываю -->
+      <!-- <section class="offers-section margin-bot">
+        <h2 section class="offers-title section-title">Спецпредложения</h2>
+        <ul class="offers-list list-rst flex">
+          <li class="offers-item flex">
             <h3 class="offers-item-title">Мальдивские острова</h3>
             <span class="offers-item-span">от&nbsp;55&nbsp;000&nbsp;₽</span>
             <a class="offers-item-link" href="#">Подробнее</a>
           </li>
-          <li class="offers-item">
+          <li class="offers-item flex">
             <h3 class="offers-item-title">Номера категории люкс</h3>
             <span class="offers-item-span">от&nbsp;5&nbsp;000&nbsp;₽</span>
             <a class="offers-item-link" href="#">Подробнее</a>
           </li>
-          <li class="offers-item">
+          <li class="offers-item flex">
             <h3 class="offers-item-title">Горящий тур на&nbsp;остров Крит</h3>
             <span class="offers-item-span">от&nbsp;30&nbsp;000&nbsp;₽</span>
             <a class="offers-item-link" href="#">Подробнее</a>
           </li>
         </ul>
+      </section> -->
+      <!-- !offers -->
+
+      <!-- ? offers test -->
+      <section class="offers-section margin-bot">
+        <h2 section class="offers-title section-title">Спецпредложения</h2>
+        <div class="offers-wrapper flex">
+          <div class="offers-left offers-cards">
+            <div class="offers-card flex">
+              <h3 class="offers-item-title">Мальдивские острова</h3>
+              <span class="offers-item-span">от&nbsp;55&nbsp;000&nbsp;₽</span>
+              <a class="offers-item-link" href="#">Подробнее</a>
+            </div>
+            <div class="offers-card flex">
+              <h3 class="offers-item-title">Горящий тур на&nbsp;остров Крит</h3>
+              <span class="offers-item-span">от&nbsp;30&nbsp;000&nbsp;₽</span>
+              <a class="offers-item-link" href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="offers-right offers-cards">
+            <div class="offers-card offers-card-big flex">
+              <h3 class="offers-item-title">Номера категории люкс</h3>
+              <span class="offers-item-span">от&nbsp;5&nbsp;000&nbsp;₽</span>
+              <a class="offers-item-link" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="section section-about-us">
-        <h1 class="section-title about-us-title">О&nbsp;нас</h1>
-        <p class="section-descr about-us-descr">Идейные соображения высшего порядка, а&nbsp;также сложившаяся структура организации влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а&nbsp;также дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Равным образом сложившаяся структура организации требуют определения и&nbsp;уточнения существенных финансовых
+      <!-- ? offers test -->
+
+      <!-- *about-us -->
+      <section class="about-us-section section margin-bot">
+        <h1 class="about-us-title section-title">О&nbsp;нас</h1>
+        <p class="about-us-descr section-descr">Идейные соображения высшего порядка, а&nbsp;также сложившаяся структура организации влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а&nbsp;также дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Равным образом сложившаяся структура организации требуют определения и&nbsp;уточнения существенных финансовых
           и&nbsp;административных условий.</p>
       </section>
-      <section class="section section-services">
-        <h2 class="section-title services-title">Услуги</h2>
-        <ul class="list-rst services-list">
+      <!-- *services -->
+      <section class="services-section section margin-bot">
+        <h2 class="services-title section-title">Услуги</h2>
+        <ul class="services-list list-rst">
           <li class="services-item">
             <h3 class="header-item-title">
               <a class="services-item-link" href="#">Эксклюзивное обслуживание</a>
@@ -102,9 +139,10 @@
           </li>
         </ul>
       </section>
-      <section class="section section-advantages">
-        <h2 class="section-title advantages-title">Преимущества</h2>
-        <ul class="list-rst advantages-list">
+      <!-- *advantages -->
+      <section class="advantages-section section margin-bot">
+        <h2 class="advantages-title section-title">Преимущества</h2>
+        <ul class="advantages-list list-rst">
           <li class="advantages-item">
             <p class="advantages-descr">Идейные соображения высшего порядка,
               а&nbsp;также постоянный количественный рост</p>
@@ -132,9 +170,10 @@
           </li>
         </ul>
       </section>
-      <section class="section section-accommodation">
-        <h2 class="section-title accommodation-title">Размещение</h2>
-        <ul class="list-rst accommodation-list">
+      <!-- *accommodation -->
+      <section class="accommodation-section section margin-bot">
+        <h2 class="accommodation-title section-title">Размещение</h2>
+        <ul class="accommodation-list list-rst">
           <li class="accommodation-item">
             <img class="accommodation-img" src="img/hotel-1.png" alt="Фотография отеля">
             <div class="accomnodation-wrapper">
@@ -153,7 +192,7 @@
             </div>
             <p class="accommodation-name" lang="es">Lagoona espa&ntilde;ola</p>
             <p class="accommodation-country">Барселона, Испания</p>
-            <button class="btn accommodation-btn">Номера</button>
+            <button class="accommodation-btn btn">Номера</button>
           </li>
           <li class="accommodation-item">
             <img class="accommodation-img" src="img/hotel-2.png" alt="Фотография отеля">
@@ -173,7 +212,7 @@
             </div>
             <p class="accommodation-name" lang="es">Lagoona son t&iacute;picas</p>
             <p class="accommodation-country">Барселона, Испания</p>
-            <button class="btn accommodation-btn">Номера</button>
+            <button class="accommodation-btn btn">Номера</button>
           </li>
           <li class="accommodation-item">
             <img class="accommodation-img" src="img/hotel-3.png" alt="Фотография отеля">
@@ -193,7 +232,7 @@
             </div>
             <p class="accommodation-name" lang="es">Lagoona de&nbsp;la&nbsp;guerra</p>
             <p class="accommodation-country">Барселона, Испания</p>
-            <button class="btn accommodation-btn">Номера</button>
+            <button class="accommodation-btn btn">Номера</button>
           </li>
           <li class="accommodation-item">
             <img class="accommodation-img" src="img/hotel-4.png" alt="Фотография отеля">
@@ -213,7 +252,7 @@
             </div>
             <p class="accommodation-name" lang="es">Lagoona mentira piadosa</p>
             <p class="accommodation-country">Барселона, Испания</p>
-            <button class="btn accommodation-btn">Номера</button>
+            <button class="accommodation-btn btn">Номера</button>
           </li>
           <li class="accommodation-item">
             <img class="accommodation-img" src="img/hotel-5.png" alt="Фотография отеля">
@@ -233,7 +272,7 @@
             </div>
             <p class="accommodation-name" lang="es">Lagoona empujar la&nbsp;creatividad</p>
             <p class="accommodation-country">Барселона, Испания</p>
-            <button class="btn accommodation-btn">Номера</button>
+            <button class="accommodation-btn btn">Номера</button>
           </li>
           <li class="accommodation-item">
             <img class="accommodation-img" src="img/hotel-6.png" alt="Фотография отеля">
@@ -253,7 +292,7 @@
             </div>
             <p class="accommodation-name" lang="es">Lagoona el&nbsp;retorno</p>
             <p class="accommodation-country">Барселона, Испания</p>
-            <button class="btn accommodation-btn">Номера</button>
+            <button class="accommodation-btn btn">Номера</button>
           </li>
           <li class="accommodation-item">
             <img class="accommodation-img" src="img/hotel-7.png" alt="Фотография отеля">
@@ -273,7 +312,7 @@
             </div>
             <p class="accommodation-name" lang="es">Lagoona mentira piadosa</p>
             <p class="accommodation-country">Барселона, Испания</p>
-            <button class="btn accommodation-btn">Номера</button>
+            <button class="accommodation-btn btn">Номера</button>
           </li>
           <li class="accommodation-item">
             <img class="accommodation-img" src="img/hotel-8.png" alt="Фотография отеля">
@@ -293,7 +332,7 @@
             </div>
             <p class="accommodation-name" lang="es">Lagoona suerte sigui&oacute; siempre</p>
             <p class="accommodation-country">Барселона, Испания</p>
-            <button class="btn accommodation-btn">Номера</button>
+            <button class="accommodation-btn btn">Номера</button>
           </li>
           <li class="accommodation-item">
             <a class="accommodation-link" href="#">Посмотреть все варианты</a>
