@@ -96,33 +96,21 @@ margin-right: 40px;
 
 /* *offers */
 
-/* !.offers-list {
-  flex-wrap: wrap;
-} */
-
-/* !.offers-item {
-  flex-direction: column;
-  width: 50%;
-  padding: 40px 45px;
-  outline: 1px solid coral;
-} */
-
-.offers-item-title {
-  margin: 0 0 15px;
+.offers-left {
+  margin-right: 24px;
 }
 
-.offers-item-span {
-  margin: 0 0 47px;
-}
-
-/* ?test */
 .offers-card {
   flex-direction: column;
   padding: 40px 45px;
   outline: 1px solid coral;
 }
 
-.offers-card-big {
+.offers-left-card:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.offers-right-card {
   justify-content: flex-end;
   height: 100%;
 }
@@ -130,4 +118,69 @@ margin-right: 40px;
 .offers-cards {
   width: 50%;
 }
-/* ?test */
+
+.offers-card-title {
+  margin: 0 0 15px;
+}
+
+.offers-card-span {
+  margin: 0 0 47px;
+}
+
+/* *about-us */
+
+.about-us-descr {
+  width: 888px;
+  margin: 0;
+}
+
+/* *services */
+
+.services-list {
+  flex-wrap: wrap;
+}
+
+.services-item {
+  width: 573px;
+  padding: 191px 45px 35px;
+  outline: 1px solid coral;
+}
+
+.services-item-descr {
+  width: 402px;
+  margin: 0;
+}
+
+.services-item:not(:nth-child(2n)) {
+  margin-right: 24px;
+}
+
+.services-item:not(:nth-last-child(-n+2)) {
+  margin-bottom: 24px;
+}
+
+/* *advantages */
+
+.advantages-list {
+  flex-wrap: wrap;
+}
+
+.advantages-item {
+  width: 276px;
+  padding: 116px 42px 32px 45px;
+  outline: 1px solid coral;
+}
+
+.advantages-item:not(:nth-child(4n)) {
+  margin-right: 22px;
+}
+
+.advantages-item:not(:nth-last-child(-n+4)) {
+  margin-bottom: 22px;
+}
+
+.advantages-descr {
+  margin: 0;
+}
+
+/* *accommodation */
