@@ -50,6 +50,7 @@ html {
 
 body {
   font-family: "Muller", sans-serif;
+  background-color: #f1f1f1;
 }
 
 a {
@@ -74,9 +75,14 @@ img {
 }
 
 .btn {
-  /* background: transparent; */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1em;
+  color: #cc9933;
+  background: transparent;
   cursor: pointer;
-  /* border-radius: 10px; */
+  border: 1px solid #cc9933;
+  border-radius: 10px;
 }
 
 .margin-bot {
@@ -86,6 +92,10 @@ img {
 .section-title {
   margin: 0 0 20px;
   padding-left: 40px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1em;
+  color: #333;
 }
 
 .list-rst {
@@ -112,6 +122,31 @@ img {
   margin-right: 40px;
 }
 
+.header-tel {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1em;
+  color: #666;
+}
+
+.header-lk {
+  padding-left: 28px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1em;
+  color: #cc9933;
+  background: url("../img/header-arrow.svg") no-repeat left center / 21px 12px;
+}
+
+.header-bot {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 27px 45px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
 .header-nav {
   align-items: center;
 }
@@ -124,20 +159,20 @@ img {
   margin-right: 45px;
 }
 
-.header-bot {
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  /* padding: 14px 45px; */
+.header-item-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1em;
+  color: #666;
 }
 
-/* .header-buttons {
+.header-buttons {
   flex-shrink: 0;
-} */
+}
 
-/* .header-btn {
+.header-btn {
   padding: 13px 20px;
-} */
+}
 
 .header-btn:not(:last-child) {
 margin-right: 40px;
@@ -145,14 +180,30 @@ margin-right: 40px;
 
 /* *offers */
 
+.offers-cards {
+  width: 50%;
+}
+
 .offers-left {
   margin-right: 24px;
 }
 
 .offers-card {
   flex-direction: column;
-  /* padding: 40px 45px; */
-  /* outline: 1px solid coral; */
+  padding: 40px 45px;
+  border-radius: 15px;
+}
+
+.offers-card-1 {
+  background: #566377 url("../img/offers-card-1.jpg") no-repeat center center / cover;
+}
+
+.offers-card-2 {
+  background: #566377 url("../img/offers-card-2.jpg") no-repeat center center / cover;
+}
+
+.offers-card-3 {
+  background: #566377 url("../img/offers-card-3.jpg") no-repeat center center / cover;
 }
 
 .offers-left-card:not(:last-child) {
@@ -160,20 +211,43 @@ margin-right: 40px;
 }
 
 .offers-right-card {
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
   height: 100%;
-}
-
-.offers-cards {
-  width: 50%;
 }
 
 .offers-card-title {
   margin: 0 0 15px;
+  font-weight: 700;
+  line-height: 1em;
+  color: #fff;
+}
+
+.offers-left-card-title {
+  max-width: 420px;
+  font-size: 40px;
+}
+
+.offers-right-card-title {
+  max-width: 300px;
+  font-size: 60px;
 }
 
 .offers-card-span {
   margin: 0 0 47px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1em;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.offers-card-link {
+  padding-right: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1em;
+  color: #f0bf5f;
+  background: url("../img/arrow.svg") no-repeat right center / 11px;
 }
 
 /* *about-us */
@@ -181,6 +255,10 @@ margin-right: 40px;
 .about-us-descr {
   width: 888px;
   margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2em;
+  color: #000;
 }
 
 /* *services */
@@ -191,22 +269,58 @@ margin-right: 40px;
 
 .services-item {
   width: 573px;
-  /* padding: 191px 45px 35px; */
-  /* outline: 1px solid coral; */
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.services-item-img {
+  width: 573px;
+  height: 165px;
+  margin-bottom: 26px;
+}
+
+.services-item-img-1 {
+  background: url("../img/services-1.jpg") no-repeat top center / cover;
+}
+
+.services-item-img-2 {
+  background: url("../img/services-2.jpg") no-repeat top center / cover;
+}
+
+.services-item-img-3 {
+  background: url("../img/services-3.jpg") no-repeat top center / cover;
+}
+
+.services-item-img-4 {
+  background: url("../img/services-4.jpg") no-repeat top center / cover;
 }
 
 .services-item-text {
-  flex-direction: column;
-  justify-content: flex-end;
+  padding: 0 45px 35px;
 }
 
 .services-item-title {
   margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 2em;
+  color: #cc9933;
+}
+
+.services-item-link {
+  padding-right: 16px;
+  /* !цвет отличается от макета. узнать как обнулить цвет у svg картинки и прописывать цвет через css */
+  background: url("../img/arrow.svg") no-repeat right center / 11px;
 }
 
 .services-item-descr {
   width: 402px;
   margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2em;
+  color: #000;
 }
 
 .services-item:not(:nth-child(2n)) {
