@@ -80,9 +80,9 @@ img {
   line-height: 1em;
   color: #cc9933;
   background: transparent;
-  cursor: pointer;
   border: 1px solid #cc9933;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .margin-bot {
@@ -316,7 +316,7 @@ margin-right: 40px;
 
 .services-item-link {
   padding-right: 16px;
-  /* !цвет отличается от макета. узнать как обнулить цвет у svg картинки и прописывать цвет через css */
+  /* !цвет стрелки отличается от макета. узнать как обнулить цвет у svg картинки и прописывать цвет через css */
   background: url("../img/arrow.svg") no-repeat right center / 11px;
 }
 
@@ -345,7 +345,6 @@ margin-right: 40px;
 
 .advantages-item {
   width: 276px;
-  /* padding: 116px 42px 32px 45px; */
   padding: 40px 40px 32px 45px;
   background-color: #fff;
   border-radius: 15px;
@@ -418,7 +417,9 @@ margin-right: 40px;
   flex-direction: column;
   justify-content: space-between;
   width: 374px;
-  /* outline: 1px solid coral; */
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .accommodation-item:not(:nth-child(3n)) {
@@ -433,9 +434,9 @@ margin-right: 40px;
   margin-bottom: 32px;
 }
 
-/* .accommodation-bot {
+.accommodation-bot {
   padding: 0 45px 45px;
-} */
+}
 
 .accomnodation-wrapper {
   justify-content: space-between;
@@ -448,16 +449,45 @@ margin-right: 40px;
   margin-right: 6px;
 }
 
+.accommodation-price-item {
+  line-height: 1em;
+}
+
 .accommodation-price-item:not(:last-child) {
   margin-right: 4px;
 }
 
+.accommodation-price-from {
+  font-weight: 400;
+  font-size: 16px;
+  color: #999;
+}
+.accommodation-price-value {
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+}
+
+.accommodation-price-night {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+
 .accommodation-name {
   margin: 0 0 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1em;
+  color: #000;
 }
 
 .accommodation-country {
   margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1em;
+  color: #999;
 }
 
 .accommodation-btn {
@@ -465,7 +495,19 @@ margin-right: 40px;
 }
 
 .accommodation-next {
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
   align-items: center;
-  /* padding: 27px 45px; */
+  padding: 27px 45px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 2em;
+  color: #fff;
+  background: #304059 url("../img/hotel-next.jpg") no-repeat center / cover;
+
+}
+
+.accommodation-next-link {
+  padding-right: 16px;
+  /* !цвет стрелки отличается от макета. узнать как обнулить цвет у svg картинки и прописывать цвет через css */
+  background: url("../img/arrow.svg") no-repeat right center / 11px;
 }
