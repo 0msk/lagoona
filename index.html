@@ -372,9 +372,37 @@
           </li>
         </ul>
       </section>
+      <!-- *tour -->
+      <section class="tour-section section margin-bot">
+        <h2 class="tour-title section-title">Хочу тур</h2>
+        <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <label>
+            Город Вылета
+            <select name="Город вылета">
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+            </select>
+          </label>
+          <label>
+            Страна
+            <select name="Страна">
+              <option value="Австралия">Австралия</option>
+            </select>
+          </label>
+          <label>
+            Дата прибытия
+            <input type="date" name="Дата прибытия" value="2021-10-18">
+          </label>
+          <label>
+            Ночей
+            <input type="number" name="Ночей" required min="1">
+          </label>
+          <label>
+            Туристы
+            <input type="number" name="Туристы" required min="1"></label>
+          <button>Найти</button>
+        </form>
+      </section>
     </main>
-    <!-- <footer class="footer"></footer> -->
-    <div class="test"></div>
   </div>
 </body>
 </html>
