@@ -377,30 +377,30 @@
         <h2 class="tour-title section-title">Хочу тур</h2>
         <form class="form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
           <div class="form-wrapper flex">
-            <label for="departure">Город Вылета</label>
-            <select id="departure" name="Город вылета">
+            <label class="form-item form-label" for="departure">Город Вылета</label>
+            <select class="form-item form-select" id="departure" name="Город вылета">
               <option value="Санкт-Петербург">Санкт-Петербург</option>
             </select>
           </div>
           <div class="form-wrapper flex">
-            <label for="country">Страна</label>
-            <select id="country" name="Страна">
+            <label class="form-item form-label" for="country">Страна</label>
+            <select class="form-item form-select" id="country" name="Страна">
               <option value="Австралия">Австралия</option>
             </select>
           </div>
           <div class="form-wrapper flex">
-            <label for="arrival">Дата прибытия</label>
-            <input id="arrival" type="date" name="Дата прибытия" value="2021-10-18">
+            <label class="form-item form-label" for="arrival">Дата прибытия</label>
+            <input class="form-item form-input" id="arrival" type="date" name="Дата прибытия" value="2021-10-18">
           </div>
           <div class="form-wrapper flex">
-            <label for="nights">Ночей</label>
-            <input id="nights" type="number" name="Ночей" min="1" required>
+            <label class="form-item form-label" for="nights">Ночей</label>
+            <input class="form-item form-input form-number" id="nights" type="number" name="Ночей" value="6" min="1" required>
           </div>
           <div class="form-wrapper flex">
-            <label for="tourists">Туристы</label>
-            <input id="tourists" type="number" name="Туристы" min="1" required>
+            <label class="form-item form-label" for="tourists">Туристы</label>
+            <input class="form-item form-input form-number" id="tourists" type="number" name="Туристы" value="2" min="1" required>
           </div>
-          <button>Найти</button>
+          <button class="form-btn btn">Найти</button>
         </form>
       </section>
     </main>
