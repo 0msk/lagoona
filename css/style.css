@@ -572,3 +572,10 @@ margin-right: 40px;
   padding: 13px 30px;
   min-width: 108px;
 }
+
+/* *contacts */
+
+.contacts-block {
+  background-color: #fff;
+  border-radius: 15px;
+}
