@@ -575,7 +575,92 @@ margin-right: 40px;
 
 /* *contacts */
 
+.contacts-section {
+  margin-bottom: 40px;
+}
+
 .contacts-block {
+  padding: 45px;
   background-color: #fff;
   border-radius: 15px;
+}
+
+.contacts-block-left {
+  width: 375px;
+  margin-right: 52px;
+}
+
+.address {
+  font-style: normal;
+}
+
+.contacts-item {
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.contacts-border {
+  padding-bottom: 23px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.contacts-subtitle {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1em;
+  color: #000;
+}
+
+.contacts-right {
+  width: 228px;
+}
+
+.contacts-descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.contacts-address {
+  margin: 0;
+  color: #000;
+}
+
+.contacts-number {
+  display: block;
+  color: #cc9933;
+}
+
+.contacts-email-wrapper {
+  flex-direction: column;
+}
+
+.contacts-email-wrapper:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.contacts-email-link {
+  color: #cc9933;
+}
+
+.contacts-email-descr {
+  color: #999;
+}
+
+.contacts-schedule {
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.contacts-schedule-descr {
+  margin: 0;
+}
+
+.contacts-block-right {
+  width: 653px;
+}
+
+.contacts-btn {
+  padding: 27px 29.5px;
 }

@@ -8,7 +8,7 @@
   <meta name="description" content="Сайт для бронирования отелей">
   <title>Сеть отелей &sdot; Lagoona</title>
   <link rel="stylesheet" href="css/normalize.min.css">
-  <!-- <link rel="stylesheet" href="css/style.css">g -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
@@ -406,39 +406,55 @@
       <!-- *contacts -->
       <section class="contacts-section section">
         <h2 class="contacts-title section-title">Контакты</h2>
-        <div class="contacts-block">
-          <div class="contacts-left">
+        <div class="contacts-block flex">
+          <div class="contacts-block-left">
             <address class="address">
               <ul class="contacts-list list-rst">
-                <li class="contacts-item">
-                  <h3 class="contacts-item-title">Адрес</h3>
-                  <p class="contacts-address">Москва, улица Юности, дом 5&nbsp;строение&nbsp;4, офис&nbsp;2</p>
-                </li>
-                <li class="contacts-item">
-                  <h3 class="contacts-item-title">Телефоны</h3>
-                  <a class="contacts-number" href="tel:+74995356434">+7&nbsp;499 535-64-34</a>
-                  <a class="contacts-number" href="tel:+74950050544">+7&nbsp;495 005-05-44</a>
-                </li>
-                <li class="contacts-item">
-                  <h3 class="contacts-item-title">Email</h3>
-                  <div class="contacts-email-wrapper">
-                    <a class="contacts-email" href="mailto:lg.oona@mail.ru">lg.oona@mail.ru</a>
-                    <span class="contacts-email-descr">по&nbsp;вопросам бронирования</span>
+                <li class="contacts-item contacts-border flex">
+                  <div class="contacts-left">
+                    <h3 class="contacts-subtitle">Адрес</h3>
                   </div>
-                  <div class="contacts-item-email-wrapper">
-                    <a class="contacts-email" href="mailto:hotels.ln@mail.ru">hotels.ln@mail.ru</a>
-                    <span class="contacts-email-descr">по&nbsp;вопросам сотрудничества</span>
+                  <div class="contacts-right">
+                    <p class="contacts-address contacts-descr contacts-descr contacts-descr">Москва, улица Юности, дом 5&nbsp;строение&nbsp;4, офис&nbsp;2</p>
+                  </div>
+                </li>
+                <li class="contacts-item contacts-border flex">
+                  <div class="contacts-left">
+                    <h3 class="contacts-subtitle">Телефоны</h3>
+                  </div>
+                  <div class="contacts-right">
+                    <a class="contacts-number contacts-descr contacts-descr" href="tel:+74995356434">+7&nbsp;499 535-64-34</a>
+                    <a class="contacts-number contacts-descr contacts-descr" href="tel:+74950050544">+7&nbsp;495 005-05-44</a>
+                  </div>
+                </li>
+                <li class="contacts-item contacts-border flex">
+                  <div class="contacts-left">
+                    <h3 class="contacts-subtitle">Email</h3>
+                  </div>
+                  <div class="contacts-right">
+                    <div class="contacts-email-wrapper flex">
+                      <a class="contacts-email-link contacts-descr" href="mailto:lg.oona@mail.ru">lg.oona@mail.ru</a>
+                      <span class="contacts-email-descr contacts-descr">по&nbsp;вопросам бронирования</span>
+                    </div>
+                    <div class="contacts-email-wrapper flex">
+                      <a class="contacts-email-link contacts-descr" href="mailto:hotels.ln@mail.ru">hotels.ln@mail.ru</a>
+                      <span class="contacts-email-descr contacts-descr">по&nbsp;вопросам сотрудничества</span>
+                    </div>
                   </div>
                 </li>
               </ul>
             </address>
-            <div class="contacts-schedule">
-              <h3 class="contacts-schedule-title">График</h3>
-              <p class="contacts-schedule-descr">Понедельник-пятница, с&nbsp;10:00 до&nbsp;19:00</p>
+            <div class="contacts-schedule contacts-border flex">
+              <div class="contacts-left">
+                <h3 class="contacts-subtitle">График</h3>
+              </div>
+              <div class="contacts-right">
+                <p class="contacts-schedule-descr contacts-descr">Понедельник-пятница, с&nbsp;10:00 до&nbsp;19:00</p>
+              </div>
             </div>
             <button class="contacts-btn btn">Построить маршрут</button>
           </div>
-          <div class="contacts-right">
+          <div class="contacts-block-right">
             <div class="contacts-img"></div>
           </div>
         </div>
