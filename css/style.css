@@ -659,6 +659,8 @@ margin-right: 40px;
 
 .contacts-block-right {
   width: 653px;
+  background: url("../img/contacts-img.jpg") no-repeat center / cover;
+  border-radius: 10px;
 }
 
 .contacts-btn {
