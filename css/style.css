@@ -50,6 +50,9 @@ html {
 
 body {
   font-family: "Muller", sans-serif;
+  /* font-weight: 400;
+  font-size: 16px;
+  line-height: 1em; */
   background-color: #f1f1f1;
 }
 
@@ -102,6 +105,10 @@ img {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.address {
+  font-style: normal;
 }
 
 /* *header */
@@ -590,10 +597,6 @@ margin-right: 40px;
   margin-right: 52px;
 }
 
-.address {
-  font-style: normal;
-}
-
 .contacts-item {
   justify-content: space-between;
   margin-bottom: 25px;
@@ -622,12 +625,12 @@ margin-right: 40px;
   line-height: 1.5em;
 }
 
-.contacts-address {
+.contacts-location {
   margin: 0;
   color: #000;
 }
 
-.contacts-number {
+.contacts-tel {
   display: block;
   color: #cc9933;
 }
@@ -665,4 +668,96 @@ margin-right: 40px;
 
 .contacts-btn {
   padding: 27px 29.5px;
+}
+
+/* *footer */
+
+.footer {
+  position: relative;
+  padding: 45px;
+  background-color: #333;
+  border-radius: 15px;
+}
+
+.official {
+  max-width: 302px;
+  margin-right: 125px;
+}
+
+.official-descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9em;
+  color: #fff;
+}
+
+.official-copy {
+  margin: 0 0 37px;
+}
+
+.official-offer {
+  margin: 0 0 40px;
+}
+
+.official-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #cc9933;
+}
+
+.footer-address-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.footer-address-location {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875em;
+  color: #fff;
+}
+
+.footer-address-link {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #cc9933;
+}
+
+.social {
+  margin-left: auto;
+}
+
+.social-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.social-link {
+  display: block;
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+}
+
+.social-tripadvisor {
+  background: url("../img/tripadvisor.svg") no-repeat center / cover;
+}
+
+.social-ok {
+  background: url("../img/ok.svg") no-repeat center / cover;
+}
+
+.social-vk {
+  background: url("../img/vk.svg") no-repeat center / cover;
+}
+
+.sun {
+  position: absolute;
+  bottom: 1px;
+  right: 177px;
+  width: 254px;
+  height: 228px;
+  background: url("../img/sun2.svg") no-repeat center / cover;
 }

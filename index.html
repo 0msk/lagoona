@@ -42,7 +42,7 @@
             <a class="header-item-link" href="#">Блог</a>
           </li>
            <li class="header-item">
-            <a class="header-item-link" href="#">Контакты</a>
+            <a class="header-item-link" href="#contacts">Контакты</a>
           </li>
           </ul>
         </nav>
@@ -405,7 +405,7 @@
         </form>
       </section>
       <!-- *contacts -->
-      <section class="contacts-section section">
+      <section class="contacts-section section" id="contacts">
         <h2 class="contacts-title section-title">Контакты</h2>
         <div class="contacts-block flex">
           <div class="contacts-block-left">
@@ -416,7 +416,7 @@
                     <h3 class="contacts-subtitle">Адрес</h3>
                   </div>
                   <div class="contacts-right">
-                    <p class="contacts-address contacts-descr">Москва, улица Юности, дом 5&nbsp;строение&nbsp;4, офис&nbsp;2</p>
+                    <p class="contacts-location contacts-descr">Москва, улица Юности, дом 5&nbsp;строение&nbsp;4, офис&nbsp;2</p>
                   </div>
                 </li>
                 <li class="contacts-item contacts-border flex">
@@ -424,8 +424,8 @@
                     <h3 class="contacts-subtitle">Телефоны</h3>
                   </div>
                   <div class="contacts-right">
-                    <a class="contacts-number contacts-descr" href="tel:+74995356434">+7&nbsp;499 535-64-34</a>
-                    <a class="contacts-number contacts-descr" href="tel:+74950050544">+7&nbsp;495 005-05-44</a>
+                    <a class="contacts-tel contacts-descr" href="tel:+74995356434">+7&nbsp;499 535-64-34</a>
+                    <a class="contacts-tel contacts-descr" href="tel:+74950050544">+7&nbsp;495 005-05-44</a>
                   </div>
                 </li>
                 <li class="contacts-item contacts-border flex">
@@ -460,24 +460,39 @@
       </section>
     </main>
     <!-- *footer -->
-    <footer class="footer">
+    <footer class="footer flex">
       <div class="official">
-        <p>&copy;&nbsp;2012&ndash;2020 Управляющая компания Объединённой сети &laquo;Лагуна Хотелс&raquo;</p>
-        <p>Представленная на&nbsp;сайте информация носит справочный характер и&nbsp;не&nbsp;является публичной офертой</p>
-        <a href="Пользовательское  соглашение.txt" download>Пользовательское соглашение</a>
+        <p class="official-copy official-descr">&copy;&nbsp;2012&ndash;2020 Управляющая компания Объединённой сети &laquo;Лагуна Хотелс&raquo;</p>
+        <p class="official-offer official-descr">Представленная на&nbsp;сайте информация носит справочный характер и&nbsp;не&nbsp;является публичной офертой</p>
+        <a class="official-link" href="Пользовательское  соглашение.txt" download>Пользовательское соглашение</a>
       </div>
       <address class="address">
         <ul class="footer-address-list list-rst">
-          <li class="footer-address-item"></li>
-          <li class="footer-address-item"></li>
-          <li class="footer-address-item"></li>
+          <li class="footer-address-item">
+            <p class="footer-address-location">11710, улица Юности, дом 5&nbsp;строение&nbsp;4, офис&nbsp;2</p>
+          </li>
+          <li class="footer-address-item">
+            <a class="footer-address-link" href="tel:+74995356434">+7&nbsp;499 535-64-34</a>
+            <a class="footer-address-link" href="tel:+74950050544">+7&nbsp;495 005-05-44</a>
+          </li>
+          <li class="footer-address-item">
+            <a class="footer-address-link" href="mailto:lg.oona@mail.ru">lg.oona@mail.ru</a>
+            <a class="footer-address-link" href="mailto:hotels.ln@mail.ru">hotels.ln@mail.ru</a>
+          </li>
         </ul>
       </address>
-      <ul class="social">
-        <li class="social-item"></li>
-        <li class="social-item"></li>
-        <li class="social-item"></li>
+      <ul class="social list-rst">
+        <li class="social-item">
+          <a class="social-link social-tripadvisor" href="https://www.tripadvisor.ru/" target="_blank">TripAdvisor</a>
+        </li>
+        <li class="social-item">
+          <a class="social-link social-ok" href="https://ok.ru/" target="_blank">Одноклассники</a>
+        </li>
+        <li class="social-item">
+          <a class="social-link social-vk" href="https://vk.com/" target="_blank">ВКонтакте</a>
+        </li>
       </ul>
+      <div class="sun"></div>
     </footer>
   </div>
 </body>
