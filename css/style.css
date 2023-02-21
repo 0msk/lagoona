@@ -86,6 +86,25 @@ img {
   border: 1px solid #cc9933;
   border-radius: 10px;
   cursor: pointer;
+  outline: none;
+}
+
+.btn:focus {
+  color: #fff;
+  border-color: #cc9933;
+  background-color: #cc9933;
+}
+
+.btn:hover {
+  color: #fff;
+  border-color: #cc9933;
+  background-color: #cc9933;
+}
+
+.btn:active {
+  color: #fff;
+  border-color: #a47312;
+  background-color: #a47312;
 }
 
 .margin-bot {
@@ -124,9 +143,15 @@ img {
 }
 
 .header-logo {
+  position: relative;
   flex-shrink: 0;
   width: 261px;
   margin-right: 40px;
+}
+
+.header-logo:focus {
+  outline: 1px solid #cc9933;
+  outline-offset: 5px;
 }
 
 .header-tel {
@@ -134,16 +159,57 @@ img {
   font-size: 20px;
   line-height: 1em;
   color: #666;
+  outline: none;
+}
+
+.header-tel:not(:hover):not(:active):focus {
+  color: #cc9933;
+  outline: 1px solid #cc9933;
+  outline-offset: 5px;
+}
+
+.header-tel:hover {
+  color: #cc9933;
+}
+
+.header-tel:active {
+  color: #a47312;
 }
 
 .header-lk {
-  padding-left: 28px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1em;
   color: #cc9933;
-  background: url("../img/header-arrow.svg") no-repeat left center / 21px 12px;
+  outline: none;
 }
+
+.header-lk:not(:hover):not(:active):focus {
+  outline: 1px solid #cc9933;
+  outline-offset: 5px;
+}
+
+.header-lk:hover {
+  color: #f0bf5f;
+}
+
+.header-lk:active {
+  color: #a47312;
+}
+
+.header-lk-fill {
+  margin-right: 4px;
+  fill: #cc9933;
+}
+
+.header-lk:hover .header-lk-fill {
+  fill: #f0bf5f;
+}
+
+.header-lk:active .header-lk-fill {
+  fill: #a47312;
+}
+
 
 .header-bot {
   justify-content: space-between;
@@ -171,6 +237,21 @@ img {
   font-size: 16px;
   line-height: 1em;
   color: #666;
+  outline: none;
+}
+
+.header-item-link:not(:hover):not(:active):focus {
+  color: #cc9933;
+  outline: 1px solid #cc9933;
+  outline-offset: 5px;
+}
+
+.header-item-link:hover {
+  color: #cc9933;
+}
+
+.header-item-link:active {
+  color: #a47312;
 }
 
 .header-buttons {
@@ -196,6 +277,7 @@ margin-right: 40px;
 }
 
 .offers-card {
+  /* position: relative; */
   flex-direction: column;
   padding: 40px 45px;
   border-radius: 15px;
@@ -204,6 +286,18 @@ margin-right: 40px;
   background-position: center;
   background-size: cover;
 }
+
+/* .offers-card::before {
+  position: absolute;
+  content: "";
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  border: 1px solid #cc9933;
+  border-radius: inherit;
+  opacity: 0;
+} */
 
 .offers-card-1 {
   background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(
@@ -261,7 +355,23 @@ margin-right: 40px;
   line-height: 1em;
   color: #f0bf5f;
   background: url("../img/arrow.svg") no-repeat right center / 11px;
+  outline: none;
 }
+
+/* !хз почему при фокусе ссылки не навешивается на карточку оутлайн. если прописать карточке оутлайн то работает. псевдоэлемент на карточке не помог. нужно попробовать сделать всю карточку ссылкой
+.offers-card-link:focus .offers-card {
+  outline: 1px solid #cc9933;
+  outline-offset: 5px;
+} */
+
+
+/* .offers-card-link:focus::before {
+  opacity: 1;
+}
+
+.offers-card-link:hover::before {
+  opacity: 1;
+} */
 
 /* *about-us */
 
@@ -422,7 +532,6 @@ margin-right: 40px;
 
 .accommodation-item {
   flex-direction: column;
-  justify-content: space-between;
   width: 374px;
   background-color: #fff;
   border-radius: 15px;
@@ -608,7 +717,6 @@ margin-right: 40px;
 }
 
 .contacts-subtitle {
-  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 1em;
@@ -720,6 +828,7 @@ margin-right: 40px;
 
 .footer-address-link {
   display: block;
+  width: fit-content;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5em;
@@ -759,5 +868,5 @@ margin-right: 40px;
   right: 177px;
   width: 254px;
   height: 228px;
-  background: url("../img/sun2.svg") no-repeat center / cover;
+  background: url("../img/sun.svg") no-repeat center / cover;
 }
