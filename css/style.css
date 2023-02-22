@@ -1,12 +1,4 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+/* *fonts */
 
 @font-face {
   font-family: "Muller";
@@ -48,11 +40,20 @@ html {
   font-display: swap;
 }
 
+/* *global */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: "Muller", sans-serif;
-  /* font-weight: 400;
-  font-size: 16px;
-  line-height: 1em; */
   background-color: #f1f1f1;
 }
 
@@ -64,8 +65,6 @@ a {
 img {
   max-width: 100%;
 }
-
-/* *global */
 
 .container {
   max-width: 1170px;
@@ -177,6 +176,7 @@ img {
 }
 
 .header-lk {
+  flex-direction: row-reverse;
   font-weight: 400;
   font-size: 16px;
   line-height: 1em;
@@ -209,7 +209,6 @@ img {
 .header-lk:active .header-lk-fill {
   fill: #a47312;
 }
-
 
 .header-bot {
   justify-content: space-between;
@@ -277,7 +276,7 @@ margin-right: 40px;
 }
 
 .offers-card {
-  /* position: relative; */
+  position: relative;
   flex-direction: column;
   padding: 40px 45px;
   border-radius: 15px;
@@ -286,18 +285,6 @@ margin-right: 40px;
   background-position: center;
   background-size: cover;
 }
-
-/* .offers-card::before {
-  position: absolute;
-  content: "";
-  top: -3px;
-  right: -3px;
-  bottom: -3px;
-  left: -3px;
-  border: 1px solid #cc9933;
-  border-radius: inherit;
-  opacity: 0;
-} */
 
 .offers-card-1 {
   background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(
@@ -358,20 +345,28 @@ margin-right: 40px;
   outline: none;
 }
 
-/* !хз почему при фокусе ссылки не навешивается на карточку оутлайн. если прописать карточке оутлайн то работает. псевдоэлемент на карточке не помог. нужно попробовать сделать всю карточку ссылкой
-.offers-card-link:focus .offers-card {
-  outline: 1px solid #cc9933;
-  outline-offset: 5px;
-} */
+.offers-card-link::before {
+  position: absolute;
+  content: "";
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  border: 1px solid #cc9933;
+  opacity: 0;
+}
 
-
-/* .offers-card-link:focus::before {
+.offers-card-link:not(:hover):not(:active):focus::before {
   opacity: 1;
 }
 
-.offers-card-link:hover::before {
-  opacity: 1;
-} */
+.offers-card-link:not(:active):hover {
+  padding-right: 27px;
+}
+
+.offers-card-link:active {
+  color: #fff;
+}
 
 /* *about-us */
 
@@ -391,16 +386,17 @@ margin-right: 40px;
 }
 
 .services-item {
+  position: relative;
   width: 573px;
   background-color: #fff;
   border-radius: 15px;
-  overflow: hidden;
 }
 
 .services-item-img {
   width: 573px;
   height: 165px;
   margin-bottom: 26px;
+  border-radius: inherit;
 }
 
 .services-item-img-1 {
@@ -423,18 +419,54 @@ margin-right: 40px;
   padding: 0 45px 35px;
 }
 
-.services-item-title {
+.header-wrapper {
+  align-items: center;
+}
+
+.services-item-link {
   margin: 0;
+  padding-right: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 2em;
   color: #cc9933;
+  outline: none;
 }
 
-.services-item-link {
-  padding-right: 16px;
-  /* !цвет стрелки отличается от макета. узнать как обнулить цвет у svg картинки и прописывать цвет через css */
-  background: url("../img/arrow.svg") no-repeat right center / 11px;
+.services-item-svg {
+  stroke: #cc9933;
+}
+
+.services-item-link::before {
+  position: absolute;
+  content: "";
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  border: 1px solid #cc9933;
+  opacity: 0;
+}
+
+.services-item-link:not(:hover):not(:active):focus::before {
+  opacity: 1;
+}
+
+.services-item-link:not(:active):hover {
+  color: #f0bf5f;
+  padding-right: 19px;
+}
+
+.services-item-link:not(:active):hover + .services-item-svg {
+  stroke: #f0bf5f;
+}
+
+.services-item-link:active {
+  color: #a47312;
+}
+
+.services-item-link:active + .services-item-svg {
+  stroke: #a47312;
 }
 
 .services-item-descr {
@@ -535,7 +567,6 @@ margin-right: 40px;
   width: 374px;
   background-color: #fff;
   border-radius: 15px;
-  overflow: hidden;
 }
 
 .accommodation-item:not(:nth-child(3n)) {
@@ -548,6 +579,10 @@ margin-right: 40px;
 
 .accommodation-top {
   margin-bottom: 32px;
+}
+
+.accommodation-img {
+  border-radius: 15px 15px 0 0;
 }
 
 .accommodation-bot {
@@ -610,7 +645,8 @@ margin-right: 40px;
   padding: 13px 20px;
 }
 
-.accommodation-next {
+.accommodation-all-options {
+  position: relative;
   justify-content: flex-end;
   align-items: center;
   padding: 27px 45px;
@@ -618,15 +654,41 @@ margin-right: 40px;
   font-size: 20px;
   line-height: 2em;
   color: #fff;
-  background: #304059 url("../img/hotel-next.jpg") no-repeat center / cover;
-
+  background: #304059 url("../img/hotel-all-options.jpg") no-repeat center / cover;
 }
 
-.accommodation-next-link {
-  padding-right: 16px;
-  /* !цвет стрелки отличается от макета. узнать как обнулить цвет у svg картинки и прописывать цвет через css */
-  background: url("../img/arrow.svg") no-repeat right center / 11px;
+.all-options-wrapper {
+  align-items: center;
 }
+
+.accommodation-all-options-link {
+  padding-right: 8px;
+  outline: none;
+}
+
+.accommodation-all-options-svg {
+  stroke: #fff;
+}
+
+.accommodation-all-options-link::before {
+  position: absolute;
+  content: "";
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  border: 1px solid #cc9933;
+  opacity: 0;
+}
+
+.accommodation-all-options-link:not(:hover):not(:active):focus::before {
+  opacity: 1;
+}
+
+.accommodation-all-options-link:not(:active):hover {
+  padding-right: 19px;
+}
+
 
 /* *tour */
 
