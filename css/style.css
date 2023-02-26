@@ -86,6 +86,7 @@ img {
   border-radius: 10px;
   cursor: pointer;
   outline: none;
+  transition: color .2s linear, background-color .3s ease;
 }
 
 .btn:focus {
@@ -142,14 +143,17 @@ img {
 }
 
 .header-logo {
-  position: relative;
   flex-shrink: 0;
   width: 261px;
+  height: 54px;
   margin-right: 40px;
+  outline: 1px solid transparent;
+  outline-offset: 10px;
+  transition: outline-color .3s ease, outline-offset .3s ease;
 }
 
 .header-logo:focus {
-  outline: 1px solid #cc9933;
+  outline-color: #cc9933;
   outline-offset: 5px;
 }
 
@@ -158,12 +162,14 @@ img {
   font-size: 20px;
   line-height: 1em;
   color: #666;
-  outline: none;
+  outline: 1px solid transparent;
+  outline-offset: 10px;
+  transition: color .2s linear, outline-color .3s ease, outline-offset .3s ease;
 }
 
 .header-tel:not(:hover):not(:active):focus {
   color: #cc9933;
-  outline: 1px solid #cc9933;
+  outline-color: #cc9933;
   outline-offset: 5px;
 }
 
@@ -181,11 +187,13 @@ img {
   font-size: 16px;
   line-height: 1em;
   color: #cc9933;
-  outline: none;
+  outline: 1px solid transparent;
+  outline-offset: 10px;
+  transition: color .2s linear, outline-color .3s ease, outline-offset .3s ease;
 }
 
 .header-lk:not(:hover):not(:active):focus {
-  outline: 1px solid #cc9933;
+  outline-color: #cc9933;
   outline-offset: 5px;
 }
 
@@ -200,6 +208,7 @@ img {
 .header-lk-fill {
   margin-right: 4px;
   fill: #cc9933;
+  transition: fill .3s ease;
 }
 
 .header-lk:hover .header-lk-fill {
@@ -236,12 +245,14 @@ img {
   font-size: 16px;
   line-height: 1em;
   color: #666;
-  outline: none;
+  outline: 1px solid transparent;
+  outline-offset: 10px;
+  transition: color .2s linear, outline-color .3s ease, outline-offset .3s ease;
 }
 
 .header-item-link:not(:hover):not(:active):focus {
   color: #cc9933;
-  outline: 1px solid #cc9933;
+  outline-color: #cc9933;
   outline-offset: 5px;
 }
 
@@ -343,20 +354,26 @@ margin-right: 40px;
   color: #f0bf5f;
   background: url("../img/arrow.svg") no-repeat right center / 11px;
   outline: none;
+  transition: color .2s linear, padding-right .3s ease;
 }
 
 .offers-card-link::before {
   position: absolute;
   content: "";
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  border: 1px solid #cc9933;
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.offers-card-link:not(:hover):not(:active):focus::before {
   top: -8px;
   right: -8px;
   bottom: -8px;
   left: -8px;
-  border: 1px solid #cc9933;
-  opacity: 0;
-}
-
-.offers-card-link:not(:hover):not(:active):focus::before {
   opacity: 1;
 }
 
@@ -431,24 +448,31 @@ margin-right: 40px;
   line-height: 2em;
   color: #cc9933;
   outline: none;
+  transition: color .2s linear, padding-right .3s ease;
 }
 
 .services-item-svg {
   stroke: #cc9933;
+  transition: stroke .3s ease;
 }
 
 .services-item-link::before {
   position: absolute;
   content: "";
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  border: 1px solid #cc9933;
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.services-item-link:not(:hover):not(:active):focus::before {
   top: -8px;
   right: -8px;
   bottom: -8px;
   left: -8px;
-  border: 1px solid #cc9933;
-  opacity: 0;
-}
-
-.services-item-link:not(:hover):not(:active):focus::before {
   opacity: 1;
 }
 
@@ -664,6 +688,7 @@ margin-right: 40px;
 .accommodation-all-options-link {
   padding-right: 8px;
   outline: none;
+  transition: color .2s linear, padding-right .3s ease;
 }
 
 .accommodation-all-options-svg {
@@ -673,15 +698,20 @@ margin-right: 40px;
 .accommodation-all-options-link::before {
   position: absolute;
   content: "";
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  border: 1px solid #cc9933;
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.accommodation-all-options-link:not(:hover):not(:active):focus::before {
   top: -8px;
   right: -8px;
   bottom: -8px;
   left: -8px;
-  border: 1px solid #cc9933;
-  opacity: 0;
-}
-
-.accommodation-all-options-link:not(:hover):not(:active):focus::before {
   opacity: 1;
 }
 
@@ -689,6 +719,9 @@ margin-right: 40px;
   padding-right: 19px;
 }
 
+.accommodation-all-options-link:active {
+  color: #cc9933;
+}
 
 /* *tour */
 
@@ -722,11 +755,12 @@ margin-right: 40px;
   font-weight: 400;
   line-height: 1em;
   color: #000;
-  outline: none;
+  outline: 1px solid transparent;
+  outline-offset: 10px;
 }
 
 .form-item:not(:hover):not(:active):focus {
-  outline: 1px solid #cc9933;
+  outline-color: #cc9933;
   outline-offset: 5px;
 }
 
@@ -752,14 +786,19 @@ margin-right: 40px;
   cursor: pointer;
 }
 
+.form-select,
+.form-calendar {
+  transition: color .2s linear, outline-color .3s ease, outline-offset .3s ease;
+}
+
 .form-input {
   width: 121px;
   padding: 0;
   border: none;
 }
 
-.form-date,
-.form-date::-webkit-calendar-picker-indicator {
+.form-calendar,
+.form-calendar::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
@@ -769,6 +808,7 @@ margin-right: 40px;
 	-webkit-appearance: textfield;
 	appearance: textfield;
   background: url("../img/number-btn.svg") no-repeat center right / 15px 14px;
+  transition: color .2s ease, outline-color .3s ease, outline-offset .3s ease, border-color .3s ease;
 }
 
 .form-number::-webkit-outer-spin-button,
@@ -837,11 +877,13 @@ margin-right: 40px;
 .contacts-link {
   width: fit-content;
   color: #cc9933;
-  outline: none;
+  outline: 1px solid transparent;
+  outline-offset: 10px;
+  transition: color .2s linear, outline-color .3s ease, outline-offset .3s ease;
 }
 
 .contacts-link:not(:hover):not(:active):focus {
-  outline: 1px solid #cc9933;
+  outline-color: #cc9933;
   outline-offset: 5px;
 }
 
@@ -937,11 +979,13 @@ margin-right: 40px;
   font-size: 16px;
   line-height: 1.5em;
   color: #cc9933;
-  outline: none;
+  outline: 1px solid transparent;
+  outline-offset: 10px;
+  transition: color .2s linear, outline-color .3s ease, outline-offset .3s ease;
 }
 
 .footer-link:not(:hover):not(:active):focus {
-  outline: 1px solid #cc9933;
+  outline-color: #cc9933;
   outline-offset: 5px;
 }
 
@@ -999,4 +1043,5 @@ margin-right: 40px;
 
 .social-fill {
   fill: #999;
+  transition: fill .3s ease;
 }
