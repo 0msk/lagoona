@@ -728,17 +728,17 @@ margin-right: 40px;
 
 /* *tour */
 
-.tour-section {
+.tour__wrapper {
   padding: 45px;
   background-color: #e9e9e9;
   border-radius: 15px;
 }
 
-.tour-title {
+.tour .section__title {
   padding-left: 0;
 }
 
-.form {
+.tour__form {
   align-items: center;
   padding: 32px 28px;
   background-color: #fff;
@@ -883,14 +883,17 @@ margin-right: 40px;
 .address__descr,
 .address__link,
 .contacts__descr {
-  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5em;
 }
 
-.address__location {
+.address__descr,
+.contacts__descr {
   margin: 0;
+}
+
+.address__location {
   color: #000;
 }
 
@@ -965,94 +968,86 @@ margin-right: 40px;
   background: url("../img/sun.svg") no-repeat center / cover;
 }
 
-.official {
+.footer__official {
   max-width: 302px;
   margin-right: 125px;
-}
-
-.official-descr {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9em;
   color: #fff;
 }
 
-.official-copy {
+.footer__copyright {
   margin: 0 0 37px;
 }
 
-.official-offer {
+.footer__offer {
   margin: 0 0 40px;
 }
 
-.footer-link {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5em;
+.footer__link {
   color: #cc9933;
   outline: 1px solid transparent;
   outline-offset: 10px;
   transition: color .2s linear, outline-color .3s ease, outline-offset .3s ease;
 }
 
-.footer-link:not(:hover):not(:active):focus {
+.footer__link:not(:hover):not(:active):focus {
   outline-color: #cc9933;
   outline-offset: 5px;
 }
 
-.footer-link:hover {
+.footer__link:hover {
   color: #f0bf5f;
 }
 
-.footer-link:active {
+.footer__link:active {
   color: #a47312;
 }
 
-.footer-address-item:not(:last-child) {
+.footer .address__item {
+  flex-direction: column;
   margin-bottom: 15px;
+  padding-bottom: 0;
 }
 
-.footer-address-location {
-  margin: 0;
-  font-weight: 400;
-  font-size: 16px;
+.footer .address__item:last-child {
+  margin-bottom: 0;
+}
+
+.footer .address__location {
   line-height: 1.875em;
   color: #fff;
 }
 
-.footer-address-link {
-  display: block;
-  width: fit-content;
-}
-
-.social {
+.footer__social {
   margin-left: auto;
 }
 
-.social-item:not(:last-child) {
+.social__item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.social-link {
+.social__link {
   display: block;
   width: 25px;
   height: 25px;
   outline: none;
 }
 
-.social-link:not(:active):focus .social-fill {
+.social__link:not(:active):focus .social__fill {
   fill: #cc9933
 }
 
-.social-link:hover .social-fill {
+.social__link:hover .social__fill {
   fill: #cc9933;
 }
 
-.social-link:active .social-fill {
+.social__link:active .social__fill {
   fill: #a47312;
 }
 
-.social-fill {
+.social__fill {
   fill: #999;
   transition: fill .3s ease;
 }
