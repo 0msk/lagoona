@@ -377,20 +377,20 @@ margin-right: 40px;
 .offers__link::before {
   position: absolute;
   content: "";
-  top: -12px;
-  right: -12px;
-  bottom: -12px;
-  left: -12px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border: 1px solid #cc9933;
   opacity: 0;
   transition: all .3s ease;
 }
 
 .offers__link:not(:hover):not(:active):focus::before {
-  top: -8px;
-  right: -8px;
-  bottom: -8px;
-  left: -8px;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
   opacity: 1;
 }
 
@@ -486,20 +486,20 @@ margin-right: 40px;
 .services__link::before {
   position: absolute;
   content: "";
-  top: -12px;
-  right: -12px;
-  bottom: -12px;
-  left: -12px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border: 1px solid #cc9933;
   opacity: 0;
   transition: all .3s ease;
 }
 
 .services__link:not(:hover):not(:active):focus::before {
-  top: -8px;
-  right: -8px;
-  bottom: -8px;
-  left: -8px;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
   opacity: 1;
 }
 
@@ -703,20 +703,20 @@ margin-right: 40px;
 .accommodation__link::before {
   position: absolute;
   content: "";
-  top: -12px;
-  right: -12px;
-  bottom: -12px;
-  left: -12px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border: 1px solid #cc9933;
   opacity: 0;
   transition: all .3s ease;
 }
 
 .accommodation__link:not(:hover):not(:active):focus::before {
-  top: -8px;
-  right: -8px;
-  bottom: -8px;
-  left: -8px;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
   opacity: 1;
 }
 
@@ -1056,10 +1056,10 @@ margin-right: 40px;
 }
 
 /* *adaptive */
-/* из-за псевдоэлемента обводки для карточек из секций спецпредложения и услуги. а в частности right: -12px при уменьшении ширины экрана появляется горизонтальная прокрутка. Для фикса использовал другие точки слома */
-@media (max-width: 1210px) {
+@media (max-width: 1200px) {
   .container {
-    max-width: 960px;
+    /* max-width: 960px; */
+    max-width: 95%;
   }
 
   .nav__item:not(:last-child) {
@@ -1074,66 +1074,23 @@ margin-right: 40px;
     margin-right: 25px;
   }
 
-  .services__item {
-    width: 49%;
+  .offers__wrapper,
+  .services__list,
+  .advantages__list,
+  .accommodation__list {
+    gap: 20px;
   }
 
   .services__content {
     padding: 16px 35px 25px;
   }
 
-  .advantages__list {
-    justify-content: center;
-    gap: 22px;
+  .advantages__item {
+    padding: 25px;
   }
 
-  .advantages__item:not(:nth-child(4n)) {
-    margin-right: 0;
-  }
-
-  .advantages__item:not(:nth-last-child(-n+4)) {
-    margin-bottom: 0;
-  }
-
-  .accommodation__list {
-    justify-content: space-between;
-  }
-
-  .accommodation__item {
-    width: 468px;
-  }
-
-  .accommodation__item:not(:nth-child(3n)) {
-    margin-right: 0;
-  }
-
-  .price {
-    font-size: 26px;
-  }
-
-  .rating__star {
-    width: 18px;
-    height: 18px;
-  }
-
-  .accommodation__name,
-  .accommodation__country {
-    font-size: 20px;
-  }
-
-  .accommodation__all {
-    margin: 24px auto 0;
-    background: none;
-    background-color: #cc9933;
-    transition: background-color .3s ease
-  }
-
-  .accommodation__all:active {
-    background-color: #a47312;
-  }
-
-  .accommodation__all .accommodation__link:active {
-    color: #fff;
+  .accommodation__content {
+    padding: 25px;
   }
 
   .tour__form {
@@ -1152,7 +1109,7 @@ margin-right: 40px;
   }
 }
 
-@media (max-width: 1002px) {
+@media (max-width: 992px) {
   .container {
     max-width: 95%;
   }
@@ -1252,6 +1209,21 @@ margin-right: 40px;
 
   .accommodation__content {
     padding: 18px 25px 25px;
+  }
+
+  .accommodation__all {
+    margin: 24px auto 0;
+    background: none;
+    background-color: #cc9933;
+    transition: background-color .3s ease
+  }
+
+  .accommodation__all:active {
+    background-color: #a47312;
+  }
+
+  .accommodation__all .accommodation__link:active {
+    color: #fff;
   }
 
   .price {
