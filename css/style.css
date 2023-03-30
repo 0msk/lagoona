@@ -104,7 +104,7 @@ img {
   cursor: pointer;
   outline: none;
   /* имя свойства | длительность | временная функция */
-  /* transition: color .2s linear, background-color .3s ease; */
+  transition: color .2s linear, background-color .3s ease;
   /* transition-property: color;
   transition-duration: .2s;
   transition-timing-function: linear; */
@@ -537,25 +537,18 @@ margin-right: 40px;
 /* *advantages */
 
 .advantages__list {
-  flex-wrap: wrap;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  gap: 22px;
 }
 
 .advantages__item {
-  width: 276px;
   padding: 40px 40px 32px 45px;
   background-color: #fff;
   border-radius: 15px;
 }
 
-.advantages__item:not(:nth-child(4n)) {
-  margin-right: 22px;
-}
-
-.advantages__item:not(:nth-last-child(-n+4)) {
-  margin-bottom: 22px;
-}
-
-.advantages__img {
+.advantages__icons {
   width: 66px;
   height: 66px;
   margin-bottom: 10px;
@@ -564,35 +557,35 @@ margin-right: 40px;
   background-size: cover;
 }
 
-.advantages__img-1 {
+.advantages__icon-1 {
   background-image: url("../img/advantages-1.svg");
 }
 
-.advantages__img-2 {
+.advantages__icon-2 {
   background-image: url("../img/advantages-2.svg");
 }
 
-.advantages__img-3 {
+.advantages__icon-3 {
   background-image: url("../img/advantages-3.svg");
 }
 
-.advantages__img-4 {
+.advantages__icon-4 {
   background-image: url("../img/advantages-4.svg");
 }
 
-.advantages__img-5 {
+.advantages__icon-5 {
   background-image: url("../img/advantages-5.svg");
 }
 
-.advantages__img-6 {
+.advantages__icon-6 {
   background-image: url("../img/advantages-6.svg");
 }
 
-.advantages__img-7 {
+.advantages__icon-7 {
   background-image: url("../img/advantages-7.svg");
 }
 
-.advantages__img-8 {
+.advantages__icon-8 {
   background-image: url("../img/advantages-8.svg");
 }
 
