@@ -80,10 +80,6 @@ img {
   display: flex;
 }
 
-.grid {
-  display: grid;
-}
-
 .btn {
   min-width: 108px;
   padding: 13px 20px;
@@ -154,7 +150,7 @@ img {
   z-index: 1;
 }
 
-/* *header */
+/* *header | Шапка */
 
 .header__top {
   justify-content: space-between;
@@ -295,7 +291,7 @@ img {
 margin-right: 40px;
 }
 
-/* *offers */
+/* **offers | Спецпредложения */
 
 .offers__wrapper {
   display: grid;
@@ -407,7 +403,7 @@ margin-right: 40px;
   color: #fff;
 }
 
-/* *about-us */
+/* *about-us | О нас */
 
 .about-us__descr {
   max-width: 888px;
@@ -422,46 +418,46 @@ margin-right: 40px;
   margin-bottom: 12px;
 }
 
-/* *services */
+/* *services | Услуги */
 
 .services__list {
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  gap: 24px;
 }
 
 .services__item {
   position: relative;
-  width: 49%;
   background-color: #fff;
   border-radius: 15px;
 }
 
-.services__item:not(:nth-last-child(-n+2)) {
-  margin-bottom: 24px;
-}
 
-.services__img {
+.services__images {
   width: 100%;
   height: 165px;
   border-radius: 15px 15px 0 0;
   /* border-top-left-radius: 15px;
   border-top-right-radius: 15px; */
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 }
 
 .services__img-1 {
-  background: url("../img/services-1.2x.jpg") no-repeat top center / cover;
+  background-image: url("../img/services-1.2x.jpg");
 }
 
 .services__img-2 {
-  background: url("../img/services-2.2x.jpg") no-repeat top center / cover;
+  background-image: url("../img/services-2.2x.jpg");
 }
 
 .services__img-3 {
-  background: url("../img/services-3.2x.jpg") no-repeat top center / cover;
+  background-image: url("../img/services-3.2x.jpg");
 }
 
 .services__img-4 {
-  background: url("../img/services-4.2x.jpg") no-repeat top center / cover;
+  background-image: url("../img/services-4.2x.jpg");
 }
 
 .services__content {
@@ -534,12 +530,12 @@ margin-right: 40px;
   color: #000;
 }
 
-/* *advantages */
+/* *advantages | Преимущества */
 
 .advantages__list {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-  gap: 22px;
+  gap: 24px;
 }
 
 .advantages__item {
@@ -597,7 +593,7 @@ margin-right: 40px;
   color: #000;
 }
 
-/* *accommodation */
+/* *accommodation | Размещение */
 
 .accommodation__list {
   flex-wrap: wrap;
@@ -740,7 +736,7 @@ margin-right: 40px;
   color: #cc9933;
 }
 
-/* *tour */
+/* *tour | Хочу тур */
 
 .tour__wrapper {
   padding: 45px;
@@ -850,7 +846,7 @@ margin-right: 40px;
   flex-shrink: 0;
 }
 
-/* *contacts */
+/* *contacts | Контакты */
 
 .contacts__wrapper {
   margin-bottom: 40px;
@@ -963,11 +959,11 @@ margin-right: 40px;
 
 .contacts__right {
   width: 653px;
-  background: url("../img/contacts-img.2x.jpg") no-repeat center / cover;
+  background: url("../img/contacts-img.jpg") no-repeat center / 150%;
   border-radius: 10px;
 }
 
-/* *footer */
+/* *footer | Подвал */
 
 .footer {
   position: relative;
