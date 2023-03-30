@@ -162,7 +162,6 @@ img {
 }
 
 .header__logo {
-  flex-shrink: 0;
   width: 261px;
   height: 54px;
   margin-right: 40px;
@@ -280,10 +279,6 @@ img {
 
 .nav__link:active {
   color: #a47312;
-}
-
-.header__buttons {
-  flex-shrink: 0;
 }
 
 .header__btn:not(:last-child) {
@@ -472,7 +467,6 @@ margin-right: 40px;
   padding-right: 8px;
   font-weight: 500;
   font-size: 20px;
-  line-height: 2em;
   color: #cc9933;
   outline: none;
   transition: color .2s linear, padding-right .3s ease;
@@ -829,10 +823,6 @@ margin-right: 40px;
   border-color: #a47312;
 }
 
-.form__btn {
-  flex-shrink: 0;
-}
-
 /* *contacts | Контакты */
 
 .contacts__wrapper {
@@ -946,7 +936,7 @@ margin-right: 40px;
 
 .contacts__right {
   width: 653px;
-  background: url("../img/contacts-img.jpg") no-repeat center / 150%;
+  background: url("../img/contacts-img.jpg") no-repeat center / cover;
   border-radius: 10px;
 }
 
@@ -1081,35 +1071,47 @@ margin-right: 40px;
     gap: 20px;
   }
 
-  .services__content {
-    padding: 16px 35px 25px;
-  }
-
-  .advantages__item {
+  .services__content,
+  .advantages__item,
+  .accommodation__content,
+  .accommodation__all {
     padding: 25px;
   }
 
-  .accommodation__content {
-    padding: 25px;
+  .accommodation__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .accommodation__price {
+    margin-bottom: 5px;
+  }
+
+  .accommodation__link {
+    font-size: 17px;
+  }
+
+  .accommodation__all .accommodation__wrapper {
+    flex-direction: row;
+    align-items: center;
   }
 
   .tour__form {
-    justify-content: center;
+    grid-template: 1fr 1fr / repeat(3, 1fr);
+    justify-items: center;
   }
 
-  .form__wrapper {
-    justify-content: space-between;
-    gap: 0;
-    width: 100%;
-    margin: 0 0 12px;
+  .form__block,
+  .form__btn {
+    width: 70%;
   }
 
   .footer::after {
-    right: 90px;
+    right: 80px;
   }
 }
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .container {
     max-width: 95%;
   }
@@ -1643,4 +1645,4 @@ margin-right: 40px;
   .offers__img-3 {
     background-image: linear-gradient(180deg, rgba(48, 64, 89, 0.84) 0%, rgba(53, 65, 83, 0) 73.64%), url("../img/offers-3.2x.jpg");
   }
-}
+} */
