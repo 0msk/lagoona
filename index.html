@@ -204,12 +204,12 @@
       <section class="accommodation section" id="accommodation">
         <div class="section__margin">
           <h2 class="section__title">Размещение</h2>
-          <ul class="accommodation__list list-rst flex">
+          <ul class="accommodation__list list-rst">
             <li class="accommodation__item flex">
               <div>
                 <img class="accommodation__img" src="img/hotel-1.2x.jpg" alt="Фотография отеля">
               </div>
-              <div class="accommodation__bot">
+              <div class="accommodation__content">
                 <div class="accommodation__wrapper flex">
                   <div class="accommodation__price price">
                     <span class="price__from">от</span>
@@ -233,7 +233,7 @@
               <div>
                 <img class="accommodation__img" src="img/hotel-2.2x.jpg" alt="Фотография отеля">
               </div>
-              <div class="accommodation__bot">
+              <div class="accommodation__content">
                 <div class="accommodation__wrapper flex">
                   <div class="accommodation__price price">
                     <span class="price__span price__from">от</span>
@@ -257,7 +257,7 @@
               <div>
                 <img class="accommodation__img" src="img/hotel-3.2x.jpg" alt="Фотография отеля">
               </div>
-              <div class="accommodation__bot">
+              <div class="accommodation__content">
                 <div class="accommodation__wrapper flex">
                   <div class="accommodation__price price">
                     <span class="price__span price__from">от</span>
@@ -281,7 +281,7 @@
               <div>
                 <img class="accommodation__img" src="img/hotel-4.2x.jpg" alt="Фотография отеля">
               </div>
-              <div class="accommodation__bot">
+              <div class="accommodation__content">
                 <div class="accommodation__wrapper flex">
                   <div class="accommodation__price price">
                     <span class="price__span price__from">от</span>
@@ -305,7 +305,7 @@
               <div>
                 <img class="accommodation__img" src="img/hotel-5.2x.jpg" alt="Фотография отеля">
               </div>
-              <div class="accommodation__bot">
+              <div class="accommodation__content">
                 <div class="accommodation__wrapper flex">
                   <div class="accommodation__price price">
                     <span class="price__span price__from">от</span>
@@ -329,7 +329,7 @@
               <div>
                 <img class="accommodation__img" src="img/hotel-6.2x.jpg" alt="Фотография отеля">
               </div>
-              <div class="accommodation__bot">
+              <div class="accommodation__content">
                 <div class="accommodation__wrapper flex">
                   <div class="accommodation__price price">
                     <span class="price__span price__from">от</span>
@@ -353,7 +353,7 @@
               <div>
                 <img class="accommodation__img" src="img/hotel-7.2x.jpg" alt="Фотография отеля">
               </div>
-              <div class="accommodation__bot">
+              <div class="accommodation__content">
                 <div class="accommodation__wrapper flex">
                   <div class="accommodation__price price">
                     <span class="price__span price__from">от</span>
@@ -377,7 +377,7 @@
               <div>
                 <img class="accommodation__img" src="img/hotel-8.2x.jpg" alt="Фотография отеля">
               </div>
-              <div class="accommodation__bot">
+              <div class="accommodation__content">
                 <div class="accommodation__wrapper flex">
                   <div class="accommodation__price price">
                     <span class="price__span price__from">от</span>
@@ -412,34 +412,32 @@
       <section class="tour section" id="tour">
         <div class="tour__wrapper section__margin">
           <h2 class="section__title">Хочу тур</h2>
-          <form class="tour__form form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
-              <div class="form__wrapper flex">
-                <div class="form__block flex">
-                  <label class="form__item form__label" for="departure">Город Вылета</label>
-                  <select class="form__item form__select" id="departure" name="Город вылета">
-                    <option value="Санкт-Петербург">Санкт-Петербург</option>
-                  </select>
-                </div>
-                <div class="form__block flex">
-                  <label class="form__item form__label" for="country">Страна</label>
-                  <select class="form__item form__select" id="country" name="Страна">
-                    <option value="Австралия">Австралия</option>
-                  </select>
-                </div>
-                <div class="form__block flex">
-                  <label class="form__item form__label" for="arrival">Дата прибытия</label>
-                  <input class="form__item form__input form__calendar" id="arrival" type="date" name="Дата прибытия" value="2021-10-18">
-                </div>
-                <div class="form__block flex">
-                  <label class="form__item form__label" for="nights">Ночей</label>
-                  <input class="form__item form__input form__number" id="nights" type="number" name="Ночей" value="6" min="1" required>
-                </div>
-                <div class="form__block flex">
-                  <label class="form__item form__label" for="tourists">Туристы</label>
-                  <input class="form__item form__input form__number" id="tourists" type="number" name="Туристы" value="2" min="1" required>
-                </div>
-              </div>
-              <button class="form__btn btn">Найти</button>
+          <form class="tour__form form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+            <div class="form__block">
+              <label class="form__item form__label" for="departure">Город Вылета</label>
+              <select class="form__item form__select" id="departure" name="Город вылета">
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+              </select>
+            </div>
+            <div class="form__block">
+              <label class="form__item form__label" for="country">Страна</label>
+              <select class="form__item form__select" id="country" name="Страна">
+                <option value="Австралия">Австралия</option>
+              </select>
+            </div>
+            <div class="form__block">
+              <label class="form__item form__label" for="arrival">Дата прибытия</label>
+              <input class="form__item form__input form__calendar" id="arrival" type="date" name="Дата прибытия" value="2021-10-18">
+            </div>
+            <div class="form__block">
+              <label class="form__item form__label" for="nights">Ночей</label>
+              <input class="form__item form__input form__number" id="nights" type="number" name="Ночей" value="6" min="1" required>
+            </div>
+            <div class="form__block">
+              <label class="form__item form__label" for="tourists">Туристы</label>
+              <input class="form__item form__input form__number" id="tourists" type="number" name="Туристы" value="2" min="1" required>
+            </div>
+            <button class="form__btn btn">Найти</button>
           </form>
         </div>
       </section>
