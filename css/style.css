@@ -1338,18 +1338,14 @@ margin-right: 40px;
   /* *accommodation | @media (max-width: 768px) */
 
   .accommodation__list {
-    grid-template: repeat(4, 1fr) 62px / 1fr 1fr;
+    grid-template: repeat(5, 1fr) / 1fr 1fr;
     gap: 16px;
   }
 
   .accommodation__all {
     grid-column: 1 / span 2 ;
-    justify-content: center;
     width: 50%;
     margin: 0 auto;
-    background: none;
-    background-color: #a47312;
-    transition: background-color .3s linear;
   }
 
   .accommodation__link,
@@ -1427,7 +1423,7 @@ margin-right: 40px;
 
 }
 
-/* @media (max-width: 576px) {
+@media (max-width: 576px) {
 
   .section__margin {
     margin-bottom: 20px;
@@ -1436,6 +1432,8 @@ margin-right: 40px;
   .section__title {
     margin-bottom: 15px;
   }
+
+  /* *header | @media (max-width: 576px) */
 
   .header__top {
     margin-bottom: 10px;
@@ -1446,42 +1444,13 @@ margin-right: 40px;
     height: 41px;
   }
 
-  .offers__card {
-    padding: 25px;
-  }
-
-  .offers__left .offers__card,
-  .offers__left .offers__card:last-child {
-    margin-bottom: 10px;
-  }
+  /* *about-us | @media (max-width: 576px) */
 
   .about-us__descr:not(:last-child) {
     margin-bottom: 8px;
   }
 
-  .advantages__list {
-    gap: 10px;
-  }
-
-  .accommodation__item {
-    width: 100%;
-  }
-
-  .accommodation__item:not(:nth-last-child(-n+3)) {
-    margin-bottom: 0;
-  }
-
-  .accommodation__item:not(:last-child) {
-    margin-bottom: 10px;
-  }
-
-  .accommodation__all {
-    margin: 0 auto;
-  }
-
-  .form__wrapper {
-    gap: 15px;
-  }
+  /* *footer | @media (max-width: 576px) */
 
   .footer__copyright,
   .footer__offer,
@@ -1489,145 +1458,97 @@ margin-right: 40px;
     margin-bottom: 10px;
   }
 
-  .footer::after {
-    display: none;
-  }
-
 }
 
 @media (max-width: 480px) {
 
-  .section__title {
-    padding-left: 15px;
-    font-size: 25px;
-  }
-
   .header__top {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 15px;
-  }
-
-  .header__left {
-    margin-bottom: 15px;
-  }
-
-  .header__bot {
-    padding: 15px;
-  }
-
-  .nav__list {
-    gap: 15px;
-  }
-
-  .offers__right .offers__subtitle {
-    font-size: 25px;
-    width: 70%;
-  }
-
-  .about-us__descr {
-    line-height: 1.65em;
-  }
-
-  .advantages__item {
-    width: 100%;
-  }
-
-  .contacts__block {
-    padding: 25px;
-  }
-
-  .address__item, .contacts__item {
-    position: relative;
-    flex-direction: column;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-  }
-
-  .address__title,
-  .contacts__title {
-    margin-bottom: 10px;
-  }
-
-  .footer {
-    flex-direction: column-reverse;
-    padding: 20px;
-  }
-
-  .footer__social {
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0 0 20px;
-  }
-
-  .social__item:not(:last-child) {
-    margin-bottom: 0;
-  }
-
-  .footer__address {
-    margin: 0 0 20px;
-  }
-
-  .footer .address__descr,
-  .footer .address__link {
-    max-width: 100%;
-  }
-
-  .footer__official {
-    max-width: 100%;
-    margin-right: 0;
-  }
-
-}
-@media (max-width: 320px) {
-
-  .container {
-    padding: 3% 0;
-  }
-
-  .section__title {
-    padding-left: 12px;
-    font-size: 18px;
-  }
-
-  .header__lk {
-    font-size: 12px;
+    margin-bottom: 14px;
   }
 
   .header__logo {
-    width: 100%;
-    height: fit-content;
+    margin-bottom: 14px;
   }
 
-  .offers__left .offers__subtitle {
-    font-size: 13px;
+  .header__bot {
+    padding: 14px;
   }
 
-  .offers__right .offers__subtitle {
-    font-size: 13px;
-    width: 100%;
+  .nav__list {
+    gap: 14px;
   }
 
-  .offers__span,
-  .offers__link {
+  .nav__link {
     font-size: 12px;
   }
 
-  .offers__span {
-    margin: 0 0 40px;
+  .section__title {
+    font-size: 22px;
   }
 
-  .offers__img-1 {
-    background-image: linear-gradient(180deg, rgba(48, 64, 89, 0.84) 0%, rgba(53, 65, 83, 0) 73.64%), url(
-   "../img/offers-1.2x.jpg");
+  .offers__wrapper {
+    gap: 14px;
+}
+
+  .offers__elements {
+    padding: 30px;
   }
 
-  .offers__img-2 {
-    background-image: linear-gradient(180deg, rgba(48, 64, 89, 0.84) 0%, rgba(53, 65, 83, 0) 73.64%), url(
-   "../img/offers-2.2x.jpg");
+  .offers__subtitle {
+    max-width: 230px;
+    font-size: 22px;
   }
 
-  .offers__img-3 {
-    background-image: linear-gradient(180deg, rgba(48, 64, 89, 0.84) 0%, rgba(53, 65, 83, 0) 73.64%), url("../img/offers-3.2x.jpg");
+  .offers__element-3 .offers__subtitle {
+    max-width: 230px;
+    font-size: 32px;
   }
-} */
+
+  .about-us__descr {
+    font-size: 14px;
+  }
+
+  .services__list {
+    gap: 14px;
+  }
+
+  .services__content {
+    padding: 14px;
+  }
+
+  .services__link {
+    font-size: 16px;
+  }
+
+  .services__descr {
+    font-size: 14px;
+  }
+
+  .advantages__list {
+    grid-template: repeat(8, 1fr) / 1fr;
+    gap: 14px;
+  }
+
+  .advantages__icons {
+    width: 42px;
+    height: 42px;
+  }
+
+  .advantages__descr {
+    font-size: 14px;
+  }
+
+  .accommodation__list {
+    grid-template: repeat(8, 2fr) 1fr / 1fr;
+    gap: 14px;
+  }
+
+  .accommodation__all {
+    grid-column: auto;
+    width: 100%;
+    margin: 0;
+  }
+
+}
