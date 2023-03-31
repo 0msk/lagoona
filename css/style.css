@@ -188,16 +188,19 @@ img {
   transition: color .2s linear, outline-color .3s ease, outline-offset .3s ease;
 }
 
+/* Элемент в фокусе */
 .header__tel:not(:hover):not(:active):focus {
   color: #cc9933;
   outline-color: #cc9933;
   outline-offset: 5px;
 }
 
+/* Элемент при наведении */
 .header__tel:hover {
   color: #cc9933;
 }
 
+/* Элемент при клике */
 .header__tel:active {
   color: #a47312;
 }
@@ -299,6 +302,7 @@ margin-right: 40px;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 40px 45px;
   border-radius: 15px;
   background-color: #304059;
@@ -675,7 +679,6 @@ margin-right: 40px;
   padding: 27px 45px;
   font-weight: 500;
   font-size: 20px;
-  line-height: 2em;
   color: #fff;
   background: #304059 url("../img/hotel-all.2x.jpg") no-repeat center / cover;
 }
@@ -686,6 +689,7 @@ margin-right: 40px;
 
 .accommodation__link {
   padding-right: 8px;
+  text-align: center;
   outline: none;
   transition: color .2s linear, padding-right .3s ease;
 }
@@ -1046,7 +1050,9 @@ margin-right: 40px;
 }
 
 /* *adaptive */
+
 @media (max-width: 1200px) {
+
   .container {
     /* max-width: 960px; */
     max-width: 95%;
@@ -1111,10 +1117,7 @@ margin-right: 40px;
   }
 }
 
-/* @media (max-width: 992px) {
-  .container {
-    max-width: 95%;
-  }
+@media (max-width: 992px) {
 
   .section__margin {
     margin-bottom: 50px;
@@ -1132,27 +1135,15 @@ margin-right: 40px;
     justify-content: space-between;
   }
 
-  .nav__item:not(:last-child) {
-    margin-right: 0;
-  }
-
   .header__buttons {
     display: none;
   }
 
-  .offers__left {
-    margin-right: 14px;
-  }
-
-  .offers__left .offers__card {
-    margin-bottom: 14px;
-  }
-
-  .offers__left .offers__subtitle {
+  .offers__subtitle {
     font-size: 26px;
   }
 
-  .offers__right .offers__subtitle {
+  .offers__element-3 .offers__subtitle {
     font-size: 40px;
   }
 
@@ -1160,12 +1151,14 @@ margin-right: 40px;
     font-size: 18px;
   }
 
-  .services__item:not(:nth-last-child(-n+2)) {
-    margin-bottom: 14px;
+  .offers__link {
+    padding-right: 0;
+    background: none;
   }
 
-  .services__item:not(:nth-child(2n)) {
-      margin-right: 14px;
+  .offers__link:not(:active):hover {
+    padding-right: 0;
+    color: #cc9933;
   }
 
   .services__content {
@@ -1181,10 +1174,7 @@ margin-right: 40px;
     line-height: 1.3em;
   }
 
-  .services__link {
-    padding-right: 0;
-  }
-
+  .services__link,
   .services__link:not(:active):hover {
     padding-right: 0;
   }
@@ -1198,84 +1188,28 @@ margin-right: 40px;
   }
 
   .advantages__list {
-    gap: 14px
-  }
-
-  .accommodation__item {
-    width: 49%;
-  }
-
-  .accommodation__item:not(:nth-last-child(-n+3)) {
-    margin-bottom: 14px;
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
   }
 
   .accommodation__content {
     padding: 18px 25px 25px;
   }
 
-  .accommodation__all {
-    margin: 24px auto 0;
-    background: none;
-    background-color: #cc9933;
-    transition: background-color .3s ease
+  .accommodation__link {
+    padding-right: 0;
   }
 
-  .accommodation__all:active {
-    background-color: #a47312;
+  .accommodation__link:not(:active):hover {
+    padding-right: 0;
+    color: #f0bf5f;
   }
 
-  .accommodation__all .accommodation__link:active {
-    color: #fff;
-  }
-
-  .price {
-    font-size: 20px;
-  }
-
-  .rating__star {
-    width: 14px;
-    height: 14px;
-  }
-
-  .accommodation__name,
-  .accommodation__country {
-    font-size: 16px;
-  }
-
-  .accommodation__all {
-    padding: 22px 26px;
-    font-size: 16px;
-  }
-
-  .form__wrapper {
-    gap: 14px;
-  }
-
-  .form__block {
-    flex-basis: 30%;
+  .accommodation__svg {
+    display: none;
   }
 
   .contacts__left {
     margin-right: 30px;
-  }
-
-  .address__title,
-  .contacts__title {
-    margin-right: 20px;
-  }
-
-  .contacts__right {
-    background: url(../img/contacts-mini.jpg) no-repeat center / cover;
-  }
-
-  .footer__official {
-    max-width: 260px;
-    margin-right: 35px;
-  }
-
-  .footer__copyright,
-  .footer__offer {
-    margin: 0 0 25px;
   }
 
   .footer .address__descr,
@@ -1284,12 +1218,12 @@ margin-right: 40px;
   }
 
   .footer::after {
-    right: 56px;
-    opacity: .5;
+    opacity: .7;
   }
+
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .container {
     padding: 15px 0 15px;
   }
@@ -1440,9 +1374,27 @@ margin-right: 40px;
     margin-right: 25px;
   }
 
-}
 
-@media (max-width: 576px) {
+  /* .address__title,
+  .contacts__title {
+    margin-right: 20px;
+  } */
+
+  /* .footer__official {
+    max-width: 260px;
+    margin-right: 35px;
+  } */
+
+  /* .footer__copyright,
+  .footer__offer {
+    margin: 0 0 25px;
+  }
+}*/
+
+
+
+
+/* @media (max-width: 576px) {
 
   .section__margin {
     margin-bottom: 20px;
