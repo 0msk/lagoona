@@ -1551,4 +1551,52 @@ margin-right: 40px;
     margin: 0;
   }
 
+  .tour__form {
+    grid-template: repeat(6, 1fr) / 1fr;
+    padding: 25px;
+  }
+
+  .form__block,
+  .form__btn {
+    width: auto;
+  }
+
+  .contacts__block {
+    padding: 25px;
+  }
+
+  .address__title,
+  .contacts__title {
+    font-size: 16px;
+  }
+
+  .address__content,
+  .contacts__content {
+    width: 150px;
+  }
+
+  .address__descr,
+  .address__link,
+  .contacts__descr {
+    font-size: 14px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__official,
+  .footer__address {
+    margin: 0 0 20px;
+  }
+
+  .footer__social {
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  .social__item:not(:last-child) {
+    margin: 0 20px 0 0;
+  }
+
 }
